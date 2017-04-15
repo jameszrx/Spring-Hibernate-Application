@@ -1,0 +1,5 @@
+package custom.validation;
+
+public class CourseCodeConstraintValidator {
+
+}

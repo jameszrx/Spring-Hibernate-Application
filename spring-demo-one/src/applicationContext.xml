@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- Load the file input -->
+	<context:property-placeholder location="classpath:sport.properties"/>
+	
+    <!-- Define your beans here -->
+    <bean id="myFortuneService" 
+    	class="Springdemo.HappyFortuneService">
+    </bean>
+    
+    <!-- Setup constructor injection -->
+    <bean id="myCoach" 
+        class="Springdemo.TrackCoach">
+        <constructor-arg ref="myFortuneService"/>
+    </bean>
+    
+    <!-- Setter injection (will call setDortuneService) -->
+    <bean id="myCricketCoach"
+    	class="Springdemo.CricketCoach">
+    	<property name="fortuneService" ref="myFortuneService"/>
+    	
+    	<!-- Injection of literal fields -->
+    	<property name="emailAddress" value="${foo.email}"/>
+    	<property name="team" value="${foo.team}"/>
+    </bean>
+    
+    <!-- Configuration of footballCoach -->
+    <bean id="randomFortune" 
+    	class="Springdemo.randomFortuneService">
+    </bean>
+    
+    <bean id="myftbCoach" 
+        class="Springdemo.footballCoach">
+        <property name="fortuneService" ref="randomFortune"/>
+    </bean>
+	</beans>
+
+	
+	
+
+
+
+

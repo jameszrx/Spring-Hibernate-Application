@@ -1,0 +1,5 @@
+package spring.mvc.demo;
+
+public class HomeController {
+
+}

@@ -1,0 +1,35 @@
+package spring.mvc.demo;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HelloWorldController {
+
+	//Show form method
+	@RequestMapping("/showForm")
+	public String showForm(){
+		return "helloworld-Form";
+	}
+	
+	//Process the form
+	@RequestMapping("/processForm")
+	public String processForm(){
+		return "helloworld";
+	}
+	
+	
+	//New control method
+	@RequestMapping("/processFormVersion2")
+	public String shout(HttpServletRequest request, Model model){
+		String stuName = request.getParameter("studentName");
+		stuName = stuName.toUpperCase();
+		String result = "Yo" + stuName;
+		
+		model.addAttribute("message", result);
+		return "helloword";
+	}
+}

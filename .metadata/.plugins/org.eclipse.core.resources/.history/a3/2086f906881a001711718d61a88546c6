@@ -1,0 +1,15 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Student Info Confirmation</title>
+</head>
+
+<body>
+	The student is confirmed: ${student.firstName}  ${student.lastName}
+	
+	<br><br>
+	
+	Country: ${student.country}
+</body>
