@@ -1,0 +1,18 @@
+package SpringController;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/customer")
+public class CustomerController {
+	//Inject the DAO into controller
+	
+	
+	@RequestMapping("/list")
+	public String listCustomers(Model theModel){
+		return "list-customer";
+	}
+	
+}

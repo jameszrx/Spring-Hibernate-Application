@@ -1,8 +1,0 @@
-package spring.mvc.demo;
-
-public class Customer {
-	
-	private String firstName;
-	
-	pirvate String lastName;
-}

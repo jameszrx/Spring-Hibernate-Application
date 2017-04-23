@@ -1,0 +1,28 @@
+package spring.dao;
+
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
+
+import spring.mvc.entity.Customer;
+
+public class CustomerDAOImpl implements CustomerDAO {
+	@Autowired
+	private SessionFactory sessionFactory; //Corresponds to bean ID.
+	
+	@Override
+	@Transactional
+	public List<Customer> getCustomers() {
+		//Get the session
+		
+		//Create a query
+		
+		//Get the result
+		
+		//Return the list
+		return null;
+	}
+
+}

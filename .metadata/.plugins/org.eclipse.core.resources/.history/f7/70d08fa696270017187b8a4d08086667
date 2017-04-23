@@ -1,0 +1,31 @@
+package spring.project.SpringController;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import spring.project.dao.CustomerDAO;
+import spring.project.entity.Customer;
+
+@Controller
+@RequestMapping("/customer")
+public class CustomerController {
+	//Inject the DAO into controller
+	@Autowired
+	private CustomerDAO customerDAO;
+	
+	@RequestMapping("/list")
+	public String listCustomers(Model theModel){
+		//Get customers from the DAO
+		List<Customer> theCustomers = customerDAO.getCustomers();
+		
+		//Add them to the model
+		theModel.addAttribute("customers", theCustomers);
+		
+		return "list-customer";
+	}
+	
+}

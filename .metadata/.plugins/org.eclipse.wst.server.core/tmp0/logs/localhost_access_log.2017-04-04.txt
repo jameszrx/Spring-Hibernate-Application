@@ -50,3 +50,8 @@
 127.0.0.1 - - [04/Apr/2017:21:22:17 -0700] "GET /spring-mvc-demo/processFormVersion3?studentName=lilei HTTP/1.1" 200 151
 127.0.0.1 - - [04/Apr/2017:21:36:13 -0700] "GET / HTTP/1.1" 404 994
 127.0.0.1 - - [04/Apr/2017:21:36:14 -0700] "GET /spring-mvc-demo/ HTTP/1.1" 500 10008
+127.0.0.1 - - [04/Apr/2017:21:41:36 -0700] "GET / HTTP/1.1" 404 994
+127.0.0.1 - - [04/Apr/2017:21:41:39 -0700] "GET /spring-mvc-demo/ HTTP/1.1" 200 151
+127.0.0.1 - - [04/Apr/2017:21:42:13 -0700] "GET /spring-mvc-demo/hello/showForm HTTP/1.1" 200 273
+127.0.0.1 - - [04/Apr/2017:21:42:15 -0700] "GET /spring-mvc-demo/hello/processFormVersion3?studentName=hohn HTTP/1.1" 200 149
+139.162.79.87 - - [04/Apr/2017:22:01:36 -0700] "GET / HTTP/1.1" 404 994

@@ -1,0 +1,5 @@
+package spring.mvc.entity;
+
+public class Customer {
+
+}

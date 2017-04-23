@@ -1,0 +1,12 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<html>
+	<title>Add the new customer</title>
+	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css"/> 
+<body>
+	
+	<form>
+	
+	</form>
+	
+</body>
+</html>
